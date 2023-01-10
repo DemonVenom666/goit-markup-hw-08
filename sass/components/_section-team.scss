@@ -1,0 +1,155 @@
+.team {
+  background-color: $buttonsColor;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.team__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: $primaryColor;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
+  }
+}
+
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+// .card-team {
+//   @extend %list;
+//   text-align: center;
+//   background-color: $whiteColor;
+//   width: 270px;
+//   margin-right: 30px;
+//   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//     0px 2px 1px rgba(0, 0, 0, 0.2);
+//   border-radius: 0px 0px 4px 4px;
+
+//   &:nth-child(4n) {
+//     margin-right: 0;
+//   }
+
+//   &__container {
+//     padding-top: 30px;
+//     padding-bottom: 30px;
+//   }
+// }
+
+.card-team {
+  @extend %list;
+  text-align: center;
+  background-color: $whiteColor;
+  width: 450px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
+  //   @media screen and (min-width: 768px) {
+  //     flex-basis: 354px;
+  //     flex-basis: calc((100% - 1 * 30px) / 2);
+  //   }
+  //   @media screen and (min-width: 1200px) {
+  //     flex-basis: 270px;
+  //     flex-basis: calc((100% - 3 * 30px) / 4);
+  //   }
+
+  &__container {
+    padding-top: 30px;
+    padding-bottom: 24px;
+    @media screen and (min-width: 1200px) {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.card-team__subtitle {
+  margin-bottom: 10px;
+  color: $primaryColor;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+}
+
+.card-team__text {
+  margin-bottom: 16px;
+  color: $secondaryColor;
+  font-size: 16px;
+  line-height: 1.18;
+}
+
+.social {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  &--centering {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.social__list {
+  @extend %list;
+  margin-left: 10px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.social__link {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  transition: background $primaryTransition;
+
+  &--background-transparancy {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+    transition: background $primaryTransition;
+  }
+}
+
+.social__icon {
+  fill: #afb1b8;
+  transition: fill $primaryTransition;
+
+  &--color-footer {
+    fill: $whiteColor;
+  }
+
+  .social__link:hover &,
+  .social__link:focus & {
+    fill: $whiteColor;
+    transition: fill $primaryTransition;
+  }
+}

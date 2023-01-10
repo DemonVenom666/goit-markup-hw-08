@@ -1,0 +1,78 @@
+.clients {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.clients__subtitle {
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
+  }
+}
+
+.company {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  //   @media screen and (min-width: 1200px) {
+  //     display: flex;
+  //   }
+}
+
+// .company__list {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 30px;
+//   padding: 0;
+//   margin: 0;
+// }
+
+.company__link {
+  display: inline-flex;
+  width: 210px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  transition: border $primaryTransition;
+  @media screen and (min-width: 786px) {
+    width: 226px;
+    height: 92px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+    height: 92px;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $accentColor;
+    transition: border $primaryTransition;
+  }
+}
+
+.company__icons {
+  fill: #afb1b8;
+  transition: fill $primaryTransition;
+
+  .company__link:hover &,
+  .company__link:focus & {
+    fill: $accentColor;
+    transition: fill $primaryTransition;
+  }
+}
