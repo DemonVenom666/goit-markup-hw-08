@@ -135,6 +135,19 @@
   fill: $secondaryColor;
   transition: fill $primaryTransition;
 
+  &--mail {
+    @media screen and (min-width: 1200px) {
+      width: 16px;
+      height: 12px;
+    }
+  }
+  &--phone {
+    @media screen and (min-width: 1200px) {
+      width: 10px;
+      height: 16px;
+    }
+  }
+
   @media screen and (min-width: 1200px) {
     margin-right: 10px;
     .menu-contact__link:hover &,
@@ -203,7 +216,9 @@
   height: 100vh;
   padding: 48px 40px;
   background-color: $whiteColor;
-  z-index: 999;
+  z-index: 9999;
+  vertical-align: middle;
+  overflow: scroll;
 
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
@@ -243,7 +258,14 @@
 }
 
 .mobile-menu__nav {
-  margin-bottom: 306px;
+  margin-bottom: calc(200px + 106 * (100vw / 479));
+
+  @media screen and (max-width: 479px) {
+    margin-bottom: calc(200px + (106 + 106 * 0.7) * ((100vw - 320px) / 479));
+  }
+  @media screen and (min-width: 480px) {
+    margin-bottom: 306px;
+  }
 }
 
 .mobile-menu__item {
@@ -266,29 +288,46 @@
   @extend %list;
   font-style: normal;
   font-weight: 500;
-  font-size: 40px;
+  font-size: calc(20px + 20 * (100vw / 479));
   line-height: 1.17;
   letter-spacing: 0.02em;
-
   color: $primaryColor;
+  @media screen and (max-width: 479px) {
+    font-size: calc(20px + (20 + 20 * 0.7) * ((100vw - 320px) / 479));
+  }
+  @media screen and (min-width: 480px) {
+    font-size: 40px;
+  }
 
   &--active {
     color: $accentColor;
-    padding-left: 4px;
   }
 }
 
 .mobile-menu__contact {
-  margin-bottom: 64px;
+  margin-bottom: calc(50px + 14 * (100vw / 479));
+
+  @media screen and (max-width: 479px) {
+    margin-bottom: calc(50px + (14 + 14 * 0.7) * ((100vw - 320px) / 479));
+  }
+  @media screen and (min-width: 480px) {
+    margin-bottom: 64px;
+  }
 }
 
 .mobile-menu__number {
   @extend %list;
   font-style: normal;
   font-weight: 500;
-  font-size: 34px;
+  font-size: calc(26px + 8 * (100vw / 479));
   line-height: 1.17;
   letter-spacing: 0.02em;
+  @media screen and (max-width: 479px) {
+    font-size: calc(26px + (8 + 8 * 0.7) * ((100vw - 320px) / 479));
+  }
+  @media screen and (min-width: 480px) {
+    font-size: 34px;
+  }
 
   color: $accentColor;
 }
@@ -297,9 +336,15 @@
   @extend %list;
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: calc(20px + 4 * (100vw / 479));
   line-height: 1.166;
   letter-spacing: 0.02em;
+  @media screen and (max-width: 479px) {
+    font-size: calc(20px + (4 + 4 * 0.7) * ((100vw - 320px) / 479));
+  }
+  @media screen and (min-width: 480px) {
+    font-size: 24px;
+  }
 
   color: $secondaryColor;
 }
@@ -308,13 +353,14 @@
   display: flex;
 
   &--item {
+    padding-right: 10px;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
     margin-right: 10px;
   }
 
   &--item:last-child {
+    padding-right: none;
     border-right: none;
-    margin-right: 0;
   }
 
   &--link {
@@ -322,9 +368,14 @@
     padding-right: 10px;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 1.22;
+    font-size: calc(12px + 6 * (100vw / 479));
     letter-spacing: 0.02em;
+    @media screen and (max-width: 479px) {
+      font-size: calc(12px + (6 + 6 * 0.7) * ((100vw - 320px) / 479));
+    }
+    @media screen and (min-width: 480px) {
+      font-size: 18px;
+    }
 
     color: $accentColor;
   }

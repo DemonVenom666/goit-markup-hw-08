@@ -15,6 +15,19 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
+  // @media screen and (min-width: 320px) {
+  //   width: 320px;
+  // }
+  // @media screen and (min-width: 480px) {
+  //   width: 450px;
+  // }
+  // @media screen and (min-width: 768px) {
+  //   width: 354px;
+  // }
+  // @media screen and (min-width: 1200px) {
+  //   width: 270px;
+  // }
 }
 
 .container {
@@ -22,6 +35,9 @@ img {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  @media screen and (min-width: 320px) {
+    width: 320px;
+  }
   @media screen and (min-width: 480px) {
     width: 480px;
   }

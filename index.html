@@ -35,14 +35,14 @@
                 <ul class="menu menu-contact">
                     <li class="menu-contact__item">
                         <a href="mailto:info@devstudio.com" class="menu-contact__link">
-                            <svg class="menu-contact__icon" width="14" height="10">
+                            <svg class="menu-contact__icon menu-contact__icon--mail" width="14" height="10">
                                 <use href="./images/icons.svg#envelope"></use>
                             </svg> info@devstudio.com
                         </a>
                     </li>
                     <li class="menu-contact__item">
                         <a href="tel:+380961111111" class="menu-contact__link">
-                            <svg class="menu-contact__icon" width="10" height="14">
+                            <svg class="menu-contact__icon menu-contact__icon--phone" width="10" height="14">
                                 <use href="./images/icons.svg#smartphone"></use>
                             </svg>+380961111111
                         </a>
@@ -114,16 +114,18 @@
 
                 <ul class="occupation__list">
                     <li class="occupation__item">
-                        <img src="./images/picturefirst.jpg" alt="Набирання коду на ноутбуку чоловіком" width="370">
+                        <img srcset="./images/picturefirst@1x.jpg 1x, ./images/picturefirst@2x.jpg 2x"
+                            src="./images/picturefirst@1x.jpg" alt="Набирання коду на ноутбуку чоловіком">
                         <p class="occupation__text">Десктопні додатки</p>
                     </li>
                     <li class="occupation__item">
-                        <img src="./images/picturesecond.jpg" alt="Жінка розроблює на ноутбуці дизайн програми"
-                            width="370">
+                        <img srcset="./images/picturesecond@1x.jpg 1x, ./images/picturesecond@2x.jpg 2x"
+                            src="./images/picturefirst@1x.jpg" alt="Жінка розроблює на ноутбуці дизайн програми">
                         <p class="occupation__text">Мобільні додатки</p>
                     </li>
                     <li class="occupation__item">
-                        <img src="./images/picturethird.jpg" alt="Малюнок на планшеті" width="370">
+                        <img srcset="./images/picturethird@1x.jpg 1x, ./images/picturethird@2x.jpg 2x"
+                            src="./images/picturefirst@1x.jpg" alt="Малюнок на планшеті">
                         <p class="occupation__text">Дизайнерські рішення</p>
                     </li>
                 </ul>
@@ -136,7 +138,15 @@
 
                 <ul class="team__list">
                     <li class="card-team">
-                        <img src="./images/IhorProductDesigner.jpg" alt="Фото чоловіка дизайнера продукту" width="270">
+
+                        <picture>
+                            <source srcset="./images/Ihor-desktop@1x.jpg 1x, ./images/Ihor-desktop@2x.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./images/Ihor-tablet@1x.jpg 1x, ./images/Ihor-tablet@2x.jpg 2x"
+                                media="(min-width: 768px)">
+                            <img srcset="./images/Ihor-mobile@1x.jpg 1x, ./images/Ihor-mobile@2x.jpg 2x"
+                                src="./images/Ihor-mobile@1x.jpg" alt="Фото чоловіка маркетолога">
+                        </picture>
 
                         <div class="card-team__container">
                             <h3 class="card-team__subtitle">Ігор Дем'яненко</h3>
@@ -175,8 +185,15 @@
                     </li>
 
                     <li class="card-team">
-                        <img src="./images/OlhaFrontendDeveloper.jpg" alt="Фото жінки інтерфейсного розробника"
-                            width="270">
+
+                        <picture>
+                            <source srcset="./images/Olga-desktop@1x.jpg 1x, ./images/Olga-desktop@2x.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./images/Olga-tablet@1x.jpg 1x, ./images/Olga-tablet@2x.jpg 2x"
+                                media="(min-width: 768px)">
+                            <img srcset="./images/Olga-mobile@1x.jpg 1x, ./images/Olga-mobile@2x.jpg 2x"
+                                src="./images/Mykola-mobile@1x.jpg" alt="Фото жінки інтерфейсного розробника">
+                        </picture>
 
                         <div class="card-team__container">
                             <h3 class="card-team__subtitle">Ольга Рєпіна</h3>
@@ -215,7 +232,15 @@
                     </li>
 
                     <li class="card-team">
-                        <img src="./images/MukolaMarketing.jpg" alt="Фото чоловіка маркетолога" width="270">
+
+                        <picture>
+                            <source srcset="./images/Mykola-desktop@1x.jpg 1x, ./images/Mykola-desktop@2x.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./images/Mykola-tablet@1x.jpg 1x, ./images/Mykola-tablet@2x.jpg 2x"
+                                media="(min-width: 768px)">
+                            <img srcset="./images/Mykola-mobile@1x.jpg 1x, ./images/Mykola-mobile@2x.jpg 2x"
+                                src="./images/Mykola-mobile@1x.jpg" alt="Микола">
+                        </picture>
 
                         <div class="card-team__container">
                             <h3 class="card-team__subtitle">Микола Тарасов</h3>
@@ -254,7 +279,15 @@
                     </li>
 
                     <li class="card-team">
-                        <img src="./images/MuchailoUIDesigner.jpg" alt="Фото чоловіка дизайнера інтерфейсу" width="270">
+
+                        <picture>
+                            <source srcset="./images/Misha-desktop@1x.jpg 1x, ./images/Misha-desktop@2x.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./images/Misha-tablet@1x.jpg 1x, ./images/Misha-tablet@2x.jpg 2x"
+                                media="(min-width: 768px)">
+                            <img srcset="./images/Misha-mobile@1x.jpg 1x, ./images/Misha-mobile@2x.jpg 2x"
+                                src="./images/Misha-mobile@1x.jpg" alt="Фото чоловіка дизайнера інтерфейсу">
+                        </picture>
 
                         <div class="card-team__container">
                             <h3 class="card-team__subtitle">Михайло Єрмаков</h3>
@@ -512,6 +545,9 @@
 
 </body>
 
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
 <script defer src="js/mobile-menu.js"></script>
 <script src="./js/modal.js"></script>
 
