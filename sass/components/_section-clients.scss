@@ -23,23 +23,27 @@
 
 .company {
   @extend %list;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // gap: 30px;
+  text-align: center;
   padding: 0;
   margin: 0;
-  //   @media screen and (min-width: 1200px) {
-  //     display: flex;
-  //   }
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
-// .company__list {
-//   display: flex;
-//   flex-wrap: wrap;
-//   gap: 30px;
-//   padding: 0;
-//   margin: 0;
-// }
+.company__list {
+  @media screen and (max-width: 479px) {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
 
 .company__link {
   display: inline-flex;

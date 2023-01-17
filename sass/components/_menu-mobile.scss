@@ -353,19 +353,23 @@
   display: flex;
 
   &--item {
-    padding-right: 10px;
+    padding-right: 5px;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
-    margin-right: 10px;
+    margin-right: 5px;
+    @media screen and (min-width: 480px) {
+      padding-right: 10px;
+      margin-right: 10px;
+    }
   }
 
   &--item:last-child {
-    padding-right: none;
+    margin-right: 0;
+    padding-right: 0;
     border-right: none;
   }
 
   &--link {
     @extend %list;
-    padding-right: 10px;
     font-style: normal;
     font-weight: 500;
     font-size: calc(12px + 6 * (100vw / 479));
