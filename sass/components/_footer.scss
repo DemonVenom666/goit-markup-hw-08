@@ -14,11 +14,10 @@
     @media screen and (min-width: 768px) {
       display: flex;
       align-items: baseline;
+      justify-content: space-around;
     }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       width: 738px;
-      padding-left: 89px;
-      padding-right: 89px;
       margin-bottom: 60px;
     }
   }
@@ -76,9 +75,6 @@
 .footer-link {
   @media screen and (min-width: 1200px) {
     margin-left: 70px;
-  }
-  @media screen and (min-width: 767px) and (max-width: 1199px) {
-    margin-left: auto;
   }
 }
 
