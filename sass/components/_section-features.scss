@@ -4,6 +4,11 @@
   margin-top: 0;
   margin-bottom: 0;
 
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
   &__list {
     @extend %list;
     @media screen and (min-width: 768px) {
